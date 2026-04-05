@@ -1,0 +1,71 @@
+/* ===== PRODUCT DETAIL ===== */
+.detail-page { padding: var(--space-3xl) 0 var(--space-4xl); }
+
+.detail-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--text-secondary); font-weight: var(--fw-medium); font-size: var(--fs-small);
+  margin-bottom: var(--space-2xl); cursor: pointer; transition: color var(--transition-fast);
+  text-decoration: none; background: none; border: none; padding: 0;
+}
+.detail-back:hover { color: var(--accent-primary-dark); }
+
+.detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start; }
+
+.detail-image-area {
+  background: linear-gradient(135deg, #E8F4FC, #D4E8F8);
+  border-radius: var(--radius-xl); padding: var(--space-4xl);
+  display: flex; align-items: center; justify-content: center; min-height: 400px;
+  position: relative;
+}
+.detail-image-area.airexcel { background: linear-gradient(135deg, #FFF0E8, #FFE0D0); }
+
+.detail-cooler-icon { font-size: 8rem; }
+
+.detail-badges { position: absolute; top: var(--space-lg); left: var(--space-lg); display: flex; gap: var(--space-sm); }
+.detail-discount-badge { background: var(--accent-secondary); color: white; padding: 6px 14px; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: var(--fw-bold); }
+
+.detail-info { }
+.detail-info .badge { margin-bottom: var(--space-md); }
+.detail-name { font-size: var(--fs-h1); margin-bottom: var(--space-xs); }
+.detail-tagline { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: var(--space-xl); }
+
+.detail-price-row { display: flex; align-items: baseline; gap: var(--space-md); margin-bottom: var(--space-xl); }
+.detail-original-price { font-size: 1.1rem; color: var(--text-tertiary); text-decoration: line-through; }
+
+.detail-description { color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-2xl); }
+
+.detail-specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-bottom: var(--space-2xl); }
+.detail-spec-item { display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-md); background: var(--bg-secondary); border-radius: var(--radius-md); }
+.detail-spec-icon { font-size: 1.3rem; }
+.detail-spec-text { display: flex; flex-direction: column; }
+.detail-spec-label { font-size: var(--fs-xs); color: var(--text-tertiary); }
+.detail-spec-value { font-weight: var(--fw-semibold); font-size: var(--fs-small); }
+
+.detail-actions { display: flex; gap: var(--space-md); margin-bottom: var(--space-3xl); flex-wrap: wrap; }
+
+.detail-features { margin-bottom: var(--space-2xl); }
+.detail-features h3 { font-size: var(--fs-h3); margin-bottom: var(--space-lg); }
+.detail-features-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+.detail-feature-item { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--fs-small); color: var(--text-secondary); padding: var(--space-sm) 0; }
+.detail-feature-item::before { content: '✓'; color: var(--accent-primary); font-weight: var(--fw-bold); }
+
+.detail-use-cases { margin-bottom: var(--space-2xl); }
+.detail-use-cases h3 { font-size: var(--fs-h3); margin-bottom: var(--space-md); }
+.detail-use-tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.detail-use-tag { background: rgba(91,181,162,0.1); color: var(--accent-primary-dark); padding: 6px 16px; border-radius: var(--radius-pill); font-size: var(--fs-small); font-weight: var(--fw-medium); }
+
+.detail-full-specs { }
+.detail-full-specs h3 { font-size: var(--fs-h3); margin-bottom: var(--space-lg); }
+.detail-specs-table { width: 100%; border-collapse: collapse; }
+.detail-specs-table tr { border-bottom: 1px solid var(--border-light); }
+.detail-specs-table td { padding: var(--space-md); }
+.detail-specs-table td:first-child { font-weight: var(--fw-medium); color: var(--text-secondary); width: 40%; }
+.detail-specs-table td:last-child { font-weight: var(--fw-semibold); }
+
+@media (max-width: 768px) {
+  .detail-layout { grid-template-columns: 1fr; }
+  .detail-specs-grid { grid-template-columns: 1fr; }
+  .detail-features-list { grid-template-columns: 1fr; }
+  .detail-cooler-icon { font-size: 5rem; }
+  .detail-image-area { min-height: 280px; padding: var(--space-2xl); }
+}
